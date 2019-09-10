@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DBCBCFE6-8918-42E4-A529-5EF9B67C3C92}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Servico.Modelo</RootNamespace>
+    <AssemblyName>Servico.Modelo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.24160719\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.12.1.2400\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccessDTC, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.24160719\bin\x86\Oracle.ManagedDataAccessDTC.dll</HintPath>
+    </Reference>
+    <Reference Include="PostSharp, Version=3.1.59.9, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sefaz.Framework\PostSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.Dados">
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.Dados.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.Dominio">
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.Dominio.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.Entidade">
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.Entidade.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.Resources">
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.Util">
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegrasDeNegocio\BaixaDePagamentosNegocio.cs" />
+    <Compile Include="RegrasDeNegocio\ImplementacaoDoServico.cs" />
+    <Compile Include="Servicos\ProcessarPagamentoServico.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Validadores\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NLog">
+      <Version>4.6.7</Version>
+    </PackageReference>
+    <PackageReference Include="Quartz">
+      <Version>3.0.7</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominio.Modelo\Dominio.Modelo.csproj">
+      <Project>{848deb99-aead-4b5f-b94b-3289eab51b30}</Project>
+      <Name>Dominio.Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infraestrutura.Modelo\Infraestrutura.Modelo.csproj">
+      <Project>{4a890ed5-e6fa-4cab-b6e7-421396d49e6e}</Project>
+      <Name>Infraestrutura.Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util.Modelo\Util.Modelo.csproj">
+      <Project>{0fbed182-1b1a-4f97-85ca-46a4a053b3a4}</Project>
+      <Name>Util.Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

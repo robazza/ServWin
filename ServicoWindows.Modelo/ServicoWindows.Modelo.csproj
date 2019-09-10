@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6CE1D01-A47F-4501-A0C8-C5C28DCA24AF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ServicoWindows.Modelo</RootNamespace>
+    <AssemblyName>ServicoWindows.Modelo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="eSefaz.ControleAcesso">
+      <HintPath>..\packages\Sefaz.Framework\eSefaz.ControleAcesso.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sefaz.Framework\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.12.1.2400\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccessDTC, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.24160719\bin\x86\Oracle.ManagedDataAccessDTC.dll</HintPath>
+    </Reference>
+    <Reference Include="PostSharp">
+      <HintPath>..\packages\Sefaz.Framework\PostSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Corporativo.Documento">
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Corporativo.Documento.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.Configuration, Version=3.1.0.1, Culture=neutral, PublicKeyToken=b1bb7bfe029b767c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.Criptografia">
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.Criptografia.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.Dados, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.Dados.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.Dominio, Version=4.5.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Sefaz.Infra.Entidade, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.Entidade.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.Exception">
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.Exception.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.Geral.Seguranca, Version=3.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.Geral.Seguranca.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.Memoria, Version=3.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.Memoria.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.MVC">
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.MVC.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.Relatorio">
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.Relatorio.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.Resources, Version=3.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.Servico">
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.Servico.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.SGS">
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.SGS.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.Util, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.WCF">
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.WCF.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.Web.ControleAcesso">
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.Web.ControleAcesso.dll</HintPath>
+    </Reference>
+    <Reference Include="Sefaz.Infra.WinService">
+      <HintPath>..\packages\Sefaz.Framework\Sefaz.Infra.WinService.dll</HintPath>
+    </Reference>
+    <Reference Include="SenhaWeb.ControleAcesso">
+      <HintPath>..\packages\Sefaz.Framework\SenhaWeb.ControleAcesso.dll</HintPath>
+    </Reference>
+    <Reference Include="SenhaWeb.DataAccess">
+      <HintPath>..\packages\Sefaz.Framework\SenhaWeb.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgendadorDeExecucao.cs" />
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service1.Designer.cs">
+      <DependentUpon>Service1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UtilitarioDeInstalacao.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Exceptionless">
+      <Version>4.3.2027</Version>
+    </PackageReference>
+    <PackageReference Include="Formo">
+      <Version>1.4.4.41776</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominio.Modelo\Dominio.Modelo.csproj">
+      <Project>{848deb99-aead-4b5f-b94b-3289eab51b30}</Project>
+      <Name>Dominio.Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infraestrutura.Modelo\Infraestrutura.Modelo.csproj">
+      <Project>{4a890ed5-e6fa-4cab-b6e7-421396d49e6e}</Project>
+      <Name>Infraestrutura.Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Servico.Modelo\Servico.Modelo.csproj">
+      <Project>{dbcbcfe6-8918-42e4-a529-5ef9b67c3c92}</Project>
+      <Name>Servico.Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util.Modelo\Util.Modelo.csproj">
+      <Project>{0fbed182-1b1a-4f97-85ca-46a4a053b3a4}</Project>
+      <Name>Util.Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
